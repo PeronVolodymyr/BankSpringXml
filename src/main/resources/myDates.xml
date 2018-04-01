@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  default-lazy-init="true"
+        xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="firstMyDateOfIssue" class="MyDate">
+        <property name="year" value="2010"/>
+        <property name="month" value="5"/>
+        <property name="day" value="23"/>
+    </bean>
+    <bean id="firstMyDateOfReturn" class="MyDate">
+        <property name="year" value="2011"/>
+        <property name="month" value="5"/>
+        <property name="day" value="23"/>
+    </bean>
+    <bean id="secondMyDateOfIssue" class="MyDate">
+        <property name="year" value="2011"/>
+        <property name="month" value="4"/>
+        <property name="day" value="20"/>
+    </bean>
+    <bean id="secondMyDateOfReturn" class="MyDate">
+        <property name="year" value="2011"/>
+        <property name="month" value="10"/>
+        <property name="day" value="20"/>
+    </bean>
+    <bean id="thirdMyDateOfIssue" class="MyDate">
+        <property name="year" value="2016"/>
+        <property name="month" value="8"/>
+        <property name="day" value="20"/>
+    </bean>
+    <bean id="thirdMyDateOfReturn" class="MyDate">
+        <property name="year" value="2017"/>
+        <property name="month" value="8"/>
+        <property name="day" value="20"/>
+    </bean>
+
+
+</beans>

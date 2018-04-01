@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true"
+        xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="firstTypeOfCredit" class="TypeOfCredit">
+        <property name="id" value="1"/>
+        <property name="name" value="Yearly credit"/>
+        <property name="conditionsOfReceiving" value="Have all the documents"/>
+        <property name="period" value="12"/>
+        <property name="rate" value="5"/>
+    </bean>
+    <bean id="secondTypeOfCredit" class="TypeOfCredit">
+        <property name="id" value="2"/>
+        <property name="name" value="Monthly credit"/>
+        <property name="rate" value="2.5"/>
+        <property name="period" value="1"/>
+        <property name="conditionsOfReceiving" value="Have all the documents"/>
+    </bean>
+</beans>

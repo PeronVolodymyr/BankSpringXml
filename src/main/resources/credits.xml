@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="customers.xml"/>
+    <import resource="typesOfcredits.xml"/>
+    <import resource="myDates.xml"/>
+
+    <bean id = "firstCredit" class="Credit">
+        <property name="customer" ref="firsCustomer"/>
+        <property name="dateOfIssue" ref="firstMyDateOfIssue"/>
+        <property name="dateOfReturn" ref="firstMyDateOfReturn"/>
+        <property name="fine" value="500"/>
+        <property name="sum" value="50000"/>
+        <property name="typeOfCredit" ref="firstTypeOfCredit"/>
+    </bean>
+    <bean id="secondCredit" class="Credit">
+        <property name="customer" ref="secondCustomer"/>
+        <property name="typeOfCredit" ref="secondTypeOfCredit"/>
+        <property name="sum" value="10000"/>
+        <property name="fine" value="0"/>
+        <property name="dateOfIssue" ref="secondMyDateOfIssue"/>
+        <property name="dateOfReturn" ref="secondMyDateOfReturn"/>
+    </bean>
+    <bean id="thirdCredit" class="Credit">
+        <property name="customer" ref="thirdCustomer"/>
+        <property name="sum" value="100000"/>
+        <property name="fine" value="100"/>
+        <property name="typeOfCredit" ref="firstTypeOfCredit"/>
+        <property name="dateOfIssue" ref="thirdMyDateOfIssue"/>
+        <property name="dateOfReturn" ref="thirdMyDateOfReturn"/>
+    </bean>
+
+</beans>

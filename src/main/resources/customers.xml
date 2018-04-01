@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="firsCustomer" class="Customer">
+        <property name="id" value="1"/>
+        <property name="address" value="st.Green, 9"/>
+        <property name="name" value="Volodymyr Peron"/>
+        <property name="phone" value="0944567093"/>
+        <property name="typeOfProperty" value="Real Estate"/>
+    </bean>
+    <bean id="secondCustomer" class="Customer">
+        <property name="id" value="2"/>
+        <property name="name" value="Denis Pitsul"/>
+        <property name="typeOfProperty" value="Real Estate"/>
+        <property name="phone" value="0978901234"/>
+        <property name="address" value="st.Black, 1"/>
+    </bean>
+    <bean id="thirdCustomer" class="Customer">
+        <property name="id" value="3"/>
+        <property name="address" value="st.White, 4"/>
+        <property name="phone" value="0689090202"/>
+        <property name="typeOfProperty" value="Cars"/>
+        <property name="name" value="Andry Onischyk"/>
+    </bean>
+
+    <!--load customer.properties-->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:customer.properties</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="customerFromProperty" class="Customer">
+        <property name="id" value="${id}"/>
+        <property name="name" value="${name}"/>
+        <property name="typeOfProperty" value="${typeOfProperty}"/>
+        <property name="phone" value="${phone}"/>
+        <property name="address" value="${address}"/>
+    </bean>
+</beans>
